@@ -1,6 +1,6 @@
 # NYC Property Sales
 
-### by: Aviv Farag, Joseph Logan, Abdulaziz Alquazi
+### by: Aviv Farag, Joseph Logan, Abdulaziz Alquzi
 
 ---
 
