@@ -15,11 +15,11 @@
 ---
 
 ## Abstract: 
-This research presents a data analytics approach and breakdown of the dataset containing heart disease patient symptoms. 
-Our analysis explores heart disease among a population of males and females between 29 and 77 years of age using risk factors that determine its prevalence.
-We used popular python libraries to demonstrate our data interpretation and exploration.
-We were able to plot various forms of the dataset to show which symptoms were most important to the audience.
-We were able to leverage tensorflow and other python machine learning packages to overall precision of the dataset. 
+We are data science consultants who are contracted by property management investors in New York City. Their company, supported by investors, wants to buy residential real estate in NYC at the cheapest price possible, renovate, then resell within a year. The renovation analysis is outside the scope of this project, but they want a baseline model that can predict the price of residential real-estate in order to :
+
+Identify potential undervalued listed properties to buy
+Predict market price when it’s time to sell in order to sell quickly while maximizing return on investment
+Because the want to renovate and sell the properties quickly, they want less than 10 residential units, and properties less than 5 million each but are at least ten thousand.
 
 ---
 
@@ -57,11 +57,13 @@ We were able to leverage tensorflow and other python machine learning packages t
 	    1. train_test_split
 	    2. GridSearchCV
 	    3. RandomizedSearchCV
+	    4. cross_validate
+	    5. KFold
       
 	1. sklearn.preprocessing: 
 	    1. StandardScaler 
 	    2. OneHotEncoder 
-	    3. RobustScaler 
+	    3. RobustScaler
 	 
 	1. sklearn.linear_model: LinearRegression
 	1. sklearn.model_selection: train_test_split
@@ -87,6 +89,7 @@ We were able to leverage tensorflow and other python machine learning packages t
     from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
     from sklearn.dummy import DummyRegressor
     from sklearn.tree import ExtraTreeRegressor
+    from sklearn.model_selection import cross_validate, KFold
 	```
 
 ---
@@ -110,6 +113,8 @@ Dealing with either reading or writing a pkl file that contains different machin
 1. **print_results(labels = [], est = [], plt_num = 50, log = False, testing = [])** <br>
 Predicting sales prices and printing results (R-Squared, MAE, and RMSE) for different estimators (est). 
 
+1. **validation(models = [], estimators = [], training = [], cv = 5, train_score = False):** <br>
+Performs cross validation for different models using their estimators and training set. 
 ---
 
 ## Setup and running the code:
